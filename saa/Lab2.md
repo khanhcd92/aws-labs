@@ -15,6 +15,8 @@ Sử dụng ngôn ngữ mình thành thạo để cài đặt 1 web hoặc api s
 
 - Security group: open port 80, 22
 
+- Test lại web của mình trên trình duyệt
+
 #### 2. Tạo EC2 với việc sử dụng Userdata
 
 Sử dụng ngôn ngữ mình thành thạo để cài đặt 1 web hoặc api server trên EC2.
@@ -31,7 +33,13 @@ Sử dụng ngôn ngữ mình thành thạo để cài đặt 1 web hoặc api s
 
 - Tạo ra EIP rồi gán vào EC2 đã tạo
 
+- Test lại web của mình trên trình duyệt
+
 #### 3. Backup EC2, EBS
+
+- Sử dụng AMI tạo backuo cho EC2
+
+- Tạo backup cho EBS
 
 #### 4. Thêm dung lượng, chia sẻ file với EBS và EFS
 
@@ -52,3 +60,15 @@ Sử dụng ngôn ngữ mình thành thạo để cài đặt 1 web hoặc api s
 - Mount EFS với EC2 đã tạo từ phần 2
 
 - Tạo thử 1 file trên dường dẫn đã mount vào EC2 xem có tạo được file không
+
+#### 5. Optional
+
+- Tạo 1 con Jenkins trên EC2
+
+- Lưu source code 1 web đơn giản trên Github
+
+- Tạo 1 con web server đơn giản trên EC2 với source code lưu trên Github
+
+- Config 1 job trên Jenkins để deploy source code lên EC2 => Keyword liên quan sẽ là deploy by ssh
+
+- Tạo 1 trigger mỗi khi commit code lên Github sẽ gọi sang Jenkins job đã tạo chạy deploy
